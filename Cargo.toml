@@ -1,0 +1,11 @@
+[package]
+name = "native-rust-solana-program"
+version = "0.1.0"
+edition = "2024"
+
+[lib]
+crate-type = ["cdylib", "lib"]
+
+[dependencies]
+borsh = "1.7.0"
+solana-program = "4.0.0"
