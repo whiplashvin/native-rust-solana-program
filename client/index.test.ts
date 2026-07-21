@@ -240,7 +240,10 @@ test("create escrow account", () => {
 });
 
 test("initEscrow", async () => {
-  svm.addProgramFromFile(programId, "../target/deploy/escrow_v2.so");
+  svm.addProgramFromFile(
+    programId,
+    "../target/deploy/native-rust-solana-program/target/deploy/native_rust_solana_program.so",
+  );
   const RENT_SYSVAR = address("SysvarRent111111111111111111111111111111111");
   const expectedAmount = 50n;
   const data = new Uint8Array([0, ...getU64Encoder().encode(expectedAmount)]);
